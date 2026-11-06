@@ -1,0 +1,8 @@
+bucket,count,definition_source
+strong-fit,10,GHL tag; William Oct 21 Fathom: estimated >250 Medicare patients
+moderate-fit,3,GHL tag; William Oct 21: verifiable practice in niche
+weak-fit,7,GHL tag from AI enrichment (demoed Oct 7); not a standalone qualification rule
+no-fit,35,GHL tag; research could not verify — does not prove invalid
+potential-fake,27,GHL tag; e.g. unverifiable personal email
+untagged,698,No enrichment fit tag — most of the file. Enrichment rolled out ~Oct 7 2026.
+total_contacts,753,GHL dump /workspace/robray/contacts.json through 2026-10-20

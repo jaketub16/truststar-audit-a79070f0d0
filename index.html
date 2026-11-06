@@ -1,0 +1,1962 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>TrustStar Health · Pipeline &amp; spend audit · Nov 2026</title>
+<link rel="icon" href="favicon.png">
+<style>
+@font-face{font-family:Geist;src:url(geist.woff2) format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:JBMono;src:url(jbmono.woff2) format('woff2');font-weight:500;font-display:swap}
+:root{--bg:#08090A;--red:#FF4438;--red2:#C4271D;--green:#3ECF6E;--yellow:#F5B544;--text:#F7F8F8;--mut:rgba(247,248,248,.58);--dim:rgba(247,248,248,.38);--line:rgba(255,255,255,.09);--glass:rgba(255,255,255,.045);--glass2:rgba(255,255,255,.075);--r:22px;--sans:Geist,-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;--mono:JBMono,ui-monospace,monospace}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 var(--sans);letter-spacing:-.005em}
+.bg{position:fixed;inset:0;z-index:-1;background:radial-gradient(900px 620px at 6% -8%,rgba(255,68,56,.24),transparent 60%),radial-gradient(800px 700px at 102% 8%,rgba(196,39,29,.16),transparent 60%),radial-gradient(900px 800px at 50% 115%,rgba(62,207,110,.07),transparent 60%),linear-gradient(180deg,#0B0C0E,#08090A 60%,#060607)}
+.bg:after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.035) 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(#000,transparent 70%)}
+main{max-width:1180px;margin:0 auto;padding:22px 18px 80px}
+.glass{background:var(--glass);border:1px solid var(--line);border-radius:var(--r);backdrop-filter:blur(22px) saturate(140%);-webkit-backdrop-filter:blur(22px) saturate(140%);box-shadow:0 1px 0 rgba(255,255,255,.06) inset,0 24px 70px -34px rgba(0,0,0,.85)}
+nav{position:sticky;top:12px;z-index:5;display:flex;align-items:center;gap:14px;padding:10px 14px;margin-bottom:26px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+.brand img{width:30px;height:30px;border-radius:8px}
+.word{font-weight:700;letter-spacing:.08em;font-size:14px}.word i{font-style:normal;color:var(--red)}
+nav .links{flex:1;display:flex;gap:2px;justify-content:center;flex-wrap:wrap}
+nav .links a{color:var(--mut);text-decoration:none;font-size:12.5px;padding:6px 9px;border-radius:999px}
+nav .links a:hover{color:var(--text);background:var(--glass2)}
+.eyebrow{font:500 11.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+h1{font-size:clamp(34px,5.6vw,62px);line-height:1.02;letter-spacing:-.04em;margin:14px 0 16px;font-weight:650}
+h1 em{font-style:normal;background:linear-gradient(90deg,#fff,#FF8A80 60%,#FF4438);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:clamp(24px,3.2vw,36px);letter-spacing:-.03em;line-height:1.12;margin:8px 0 10px;font-weight:620}
+h3{font-size:17px;margin:0 0 8px;letter-spacing:-.01em}
+p{margin:0 0 12px}.lead{font-size:18px;color:var(--mut);max-width:820px}
+.muted{color:var(--mut)}.dim{color:var(--dim)}.small{font-size:12.5px}.mono{font-family:var(--mono)}
+section{margin:64px 0 0}.hd{max-width:820px;margin-bottom:20px}
+.hero{padding:40px 34px 34px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;right:-120px;top:-140px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,68,56,.35),transparent 65%);filter:blur(10px)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 8px}
+.chip{font:500 12px var(--mono);padding:6px 11px;border-radius:999px;border:1px solid var(--line);background:var(--glass);color:var(--mut)}
+.chip.warn{color:var(--yellow);border-color:rgba(245,181,68,.4)}
+.chip.good{color:var(--green);border-color:rgba(62,207,110,.35)}
+.grid{display:grid;gap:12px}.g6{grid-template-columns:repeat(6,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+.kpi{padding:16px 18px}.kpi span{display:block;font-size:12.5px;color:var(--mut)}.kpi b{display:block;font:500 28px/1.15 var(--mono);letter-spacing:-.04em;margin-top:6px}.kpi small{color:var(--dim);font-size:12px;display:block;margin-top:6px}
+.card{padding:22px}
+.quote{padding:16px 18px;border-left:2px solid var(--red)}
+.quote p{font-size:15.5px;margin:0 0 8px}.quote span{font:500 11.5px var(--mono);color:var(--dim);letter-spacing:.04em}
+.c-green{color:var(--green)}.c-yellow{color:var(--yellow)}.c-red{color:var(--red)}
+.tbl-wrap{overflow:auto;border-radius:16px;border:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:9px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 10.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mut);background:rgba(255,255,255,.03);position:sticky;top:0}
+tr.total{background:rgba(255,68,56,.07);font-weight:600}
+tr.partial{background:rgba(245,181,68,.05)}
+tr.yes{background:rgba(62,207,110,.07)}
+tr.no{background:rgba(255,68,56,.05)}
+td.na{color:var(--dim);font-style:italic}
+.note-chip{display:block;font:500 10.5px var(--mono);color:var(--yellow);margin-top:4px;white-space:normal;letter-spacing:0;text-transform:none}
+.formula{font-family:var(--mono);font-size:12.5px;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid var(--line);color:var(--mut);margin:8px 0 12px}
+.callout{padding:18px 20px;border:1px solid rgba(245,181,68,.35);background:rgba(245,181,68,.07)}
+.callout.good{border-color:rgba(62,207,110,.3);background:rgba(62,207,110,.07)}
+.callout.bad{border-color:rgba(255,68,56,.35);background:rgba(255,68,56,.07)}
+ol.talk, ul.plain{margin:0;padding-left:20px}
+ol.talk li, ul.plain li{margin:8px 0}
+details.box{padding:16px 18px}
+details.box summary{cursor:pointer;font-weight:600}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--mut);margin:0 0 8px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+svg text{font-family:var(--mono);fill:rgba(247,248,248,.45);font-size:10px}
+.funnel{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.fc{padding:14px;border-radius:16px;border:1px solid var(--line);background:var(--glass2);position:relative;overflow:hidden}
+.fc:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--red)}
+.fc span{display:block;font-size:12px;color:var(--mut)}.fc b{display:block;font:500 26px var(--mono);letter-spacing:-.03em;margin:4px 0}.fc em{font-style:normal;font-size:12px;color:var(--dim)}
+a{color:#FF8A80}
+.foot{margin-top:56px;padding:18px;color:var(--mut);font-size:12.5px}
+@media (max-width:1100px){.g6{grid-template-columns:repeat(3,1fr)}.funnel{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:720px){.g6,.g4,.g3,.g2,.funnel{grid-template-columns:1fr}.hero{padding:26px 18px} nav .links{display:none}}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<main>
+<nav class="glass">
+  <a class="brand" href="#top"><img src="favicon.png" alt=""><span class="word">ALE<i>TTO</i></span></a>
+  <div class="links">
+    <a href="#bottom-line">Bottom line</a>
+    <a href="#weekly">Weekly</a>
+    <a href="#quality">Quality</a>
+    <a href="#math">Pipeline math</a>
+    <a href="#spend">Spend cut</a>
+    <a href="#talk">Talking points</a>
+    <a href="#sources">Sources</a>
+  </div>
+</nav>
+
+<section id="top" class="hero glass">
+  <div class="eyebrow">Internal audit · not sent to the client</div>
+  <h1>TrustStar Health:<br><em>real pipeline math</em> before any spend-cut email</h1>
+  <p class="lead">Jake asked for a rundown of “Robert Ray, TrustStar” — ads, enriched leads, qualified leads, qualified bookings, the level of clients coming in, and what the pipeline is actually worth — week by week, so Aletto can later argue why they would cut spend. These are the honest numbers first.</p>
+  <div class="chips">
+    <span class="chip">As of Friday 6 Nov 2026, Europe/Madrid</span>
+    <span class="chip">Robert O. Wray, Jr. · CEO</span>
+    <span class="chip">TrustStar Health = BlueStar TeleHealth rebrand</span>
+    <span class="chip">B2B physician buyers — not patient leads</span>
+    <span class="chip warn">Meta live feed blocked · cache through 3 Nov 2026</span>
+    <span class="chip warn">GHL subaccount dump through 20 Oct 2026</span>
+  </div>
+</section>
+
+<section id="who">
+  <div class="hd"><h2>Who this is</h2>
+    <p class="muted">Jake said “Robert Ray.” Live records all point to one person and one company. Do not split them, and do not mix them with other Robs in the file.</p>
+  </div>
+  <div class="grid g2">
+    <div class="card glass">
+      <h3>The contact</h3>
+      <p><b>Robert O. Wray, Jr.</b> (Rob), Rear Admiral, USN (ret). CEO of TrustStar Health, formerly BlueStar TeleHealth. Rockville, Maryland (7654 Standish Place, 20855). Sales lead on the account is Steve Carey. Internal team names that appear around the account: Davis Nordeen, Lisa Roden, Preston Weir, David Sween.</p>
+      <p class="small muted">GHL sub-account BlueStar TeleHealth, location id <span class="mono">k9NJgO3rym5reObnO7DO</span>. Notion client page treats BlueStar / TrustStar / SeniorTech as aliases of the same client. Launch recorded as 29 May 2025 (ads actually start 26 May 2025). Aletto collected-to-date <b>$39,999.92</b> — that is Aletto’s fees, not TrustStar patient revenue. Health 6, churn risk 0.45, flagged at risk.</p>
+    </div>
+    <div class="card glass">
+      <h3>What they sell, and who the ads reach</h3>
+      <p>The live ads sell remote patient monitoring / chronic care management <b>to independent physician practices</b> (family practice, internal medicine, endocrinology, geriatrics, typically 250+ Medicare patients). The lead is a doctor or practice decision-maker, not a patient.</p>
+      <p>Landing pages still live under trybluestartelehealth.com (<span class="mono">/freeassessment</span>, <span class="mono">/admirals-letter</span>, <span class="mono">/vsl-page-2</span>). Steve noted on 4 Nov that forms still say BlueStar.</p>
+      <p class="small muted">There is a separate, unused D2C hypertension idea from August/September (survey willingness-to-pay $51–$63/month). It is not what these ads are generating. Do not use patient-consumer math on this pipeline.</p>
+    </div>
+  </div>
+</section>
+
+<section id="bottom-line">
+  <div class="hd"><h2>Bottom line for Jake</h2></div>
+  <div class="grid g2">
+    <div class="card glass callout good">
+      <h3 class="c-green">What the data does support</h3>
+      <p>At about <b>$1,500 a week</b> since mid-September — especially the Admiral’s Letter campaign — bookings got cheaper, not more expensive. Rob’s own October numbers (two weeks): <b>24 leads, 12 booked, 3 showed, $3,000 spend</b> → $125 cost per lead, <b>$250 per booking</b>, $1,000 per show, 50% book rate. Spring was closer to 17% book rate and $485–$730 per booking. William’s 4 Nov read on Admiral’s Letter (C-04): 16 bookings from 12 leads, about $244 per booked call.</p>
+    </div>
+    <div class="card glass callout">
+      <h3 class="c-yellow">What the data does not support</h3>
+      <p>It does <b>not</b> yet prove that keeping $1,500/week is throwing off cash. Rob’s three “YES” deals are worth <b>$690,000 a year on paper</b> if they fully enroll — Ashley $311k, Jones $189k, Ohri $190k — but as of his 19 Oct note, Ashley’s first patients were still “late October,” Ohri was stuck on a Medicare audit, and Jones had only just started onboarding. In his 24 Aug memo the company itself was only “doing about $10k/month in revenue,” mostly from the original 150-doctor practice that is <b>not</b> on Aletto’s rev-share. Ads now cost about <b>$6,600 a month</b>. He told the team on 4 Nov he has a cash crunch and wants to save a few thousand a month for two or three months. Yona was still chasing the unpaid second $10,000 Ascension installment on 6 Nov.</p>
+    </div>
+  </div>
+  <div class="card glass" style="margin-top:12px">
+    <p style="margin:0">The bottleneck looks like <b>shows and collected revenue</b>, not raw lead volume. Steve has about a 40-call backlog. Only about 23% of Rob’s April–October bookings showed (13 of 57, or 12 of 57 if you use the sheet’s own SUM). Cutting the winning Admiral’s Letter campaign to hit $700–$800/week would pause the efficient booking engine just as the backlog needs working. Cutting tests and leaving C-04 up is the more defensible trim <i>if</i> cash forces a cut. A spend-defense email that ignores show rate and cash timing will not land.</p>
+  </div>
+</section>
+
+<section id="kpis">
+  <div class="hd"><h2>The numbers at a glance</h2>
+    <p class="muted">Three clocks, kept separate on purpose. Lifetime ads are Meta. April–mid-October is Rob’s own scoreboard — the one he will recognize. CRM tags are the 20 Oct GHL dump.</p>
+  </div>
+  <div class="grid g6">
+    <div class="kpi glass"><span>Lifetime Meta spend</span><b>$57,579.11</b><small>26 May 2025 – 3 Nov 2026 · 672 Meta lead events · two ad accounts, no overlap</small></div>
+    <div class="kpi glass"><span>Rob’s Apr–mid-Oct spend</span><b>$22,484</b><small>Matches Meta $22,532.53 in the same window, $49 apart</small></div>
+    <div class="kpi glass"><span>Rob’s leads → booked → showed</span><b>229 → 57 → 13</b><small>24.9% book · 22.8% show · sheet SUM showed 12; 13 names on the Shows tab</small></div>
+    <div class="kpi glass"><span>YES deals, face value</span><b>$690,000/yr</b><small>3 proposals Rob marked YES. Not collected cash. Average $230,000</small></div>
+    <div class="kpi glass"><span>Current weekly spend</span><b>$1,524.68</b><small>Average of the four complete weeks of 5, 12, 19 and 26 Oct. He asked for $700–$800</small></div>
+    <div class="kpi glass"><span>Ad cost per YES so far</span><b>$7,495</b><small>$22,484 ÷ 3 in Rob’s window. More deals may still close from that same cohort</small></div>
+  </div>
+</section>
+
+<section id="funnel">
+  <div class="hd"><h2>Rob’s April–mid-October funnel</h2>
+    <p class="muted">This is the scoreboard he emailed on 19 Oct 2026 at 22:04 Europe/Madrid (20:04 UTC). Use it when talking to him. Do not add qualified leads on top of the booked subset — it is one funnel.</p>
+  </div>
+  <div class="funnel">
+    <div class="fc"><span>Spend</span><b>$22,484</b><em>his figure · Meta $22,532.53</em></div>
+    <div class="fc"><span>Leads</span><b>229</b><em>CPL $98.18</em></div>
+    <div class="fc"><span>Booked</span><b>57</b><em>24.9% · $394 per booking</em></div>
+    <div class="fc"><span>Showed</span><b>13</b><em>22.8% of bookings · ~$1,730/show</em></div>
+    <div class="fc"><span>YES / in play</span><b>3 / 4</b><em>3 YES · 4 proposals still working · 2 no · 1 ghosted · 2 no-bid · 1 chasing</em></div>
+  </div>
+  <div class="card glass" style="margin-top:12px">
+    <div class="formula">Lead → book = 57 / 229 = 24.9%&nbsp;&nbsp;·&nbsp;&nbsp;Book → show = 13 / 57 = 22.8% (or 12 / 57 = 21.1% on the Data SUM)&nbsp;&nbsp;·&nbsp;&nbsp;Show → proposal = 10 / 13 = 76.9%&nbsp;&nbsp;·&nbsp;&nbsp;Proposal → YES so far = 3 / 10 = 30%&nbsp;&nbsp;·&nbsp;&nbsp;Show → YES so far = 3 / 13 = 23.1%&nbsp;&nbsp;·&nbsp;&nbsp;Lead → YES so far = 3 / 229 = 1.31%</div>
+    <p class="small muted" style="margin:0">Email copy said 13 showed and cost per show about $1,793 ($22,484 / 13). The Data tab’s monthly “Showed” cells add to 12, which is why the sheet also prints $1,873.67 per show. Anand Gupta is named on the Shows tab (status: chasing a discovery call) and is the extra person. We use 13 as Rob’s named-show count and flag the off-by-one.</p>
+  </div>
+</section>
+
+<section id="defs">
+  <div class="hd"><h2>How each column is defined</h2>
+    <p class="muted">If two systems disagree, it is usually because they are counting different things — not because one file is invented.</p>
+  </div>
+  <div class="tbl-wrap glass">
+    <table>
+      <thead><tr><th>Metric</th><th>Definition used here</th><th>What it is not</th></tr></thead>
+      <tbody>
+        <tr><td>Meta spend / Meta lead events</td><td>Daily Meta <span class="mono">spend</span> and <span class="mono">actions_lead</span>, rolled to Monday–Sunday weeks. Two sequential ad accounts: BlueStar SeniorTech (26 May 2025 – 11 Jul 2026) and BlueStar Ad Account (20 Aug 2026 – 3 Nov 2026).</td><td>Not unique people. One person can submit more than once. Not GHL contacts.</td></tr>
+        <tr><td>Unique opt-in lead</td><td>GHL contact with tag <span class="mono">new lead [optin]</span>, counted in the week the contact was created (US Eastern date).</td><td>Not Meta lead events (672 lifetime vs 666 opt-in tags). Rob’s “229 leads” is his own column, close to but not equal to 211 GHL opt-ins created 1 Apr–14 Oct.</td></tr>
+        <tr><td>Qualified lead / MQL</td><td>GHL tag <span class="mono">mql</span>. This is a funnel tag, 341 of 753 contacts in the dump.</td><td>Not an enrichment score. Strong-fit alone is not treated as qualification.</td></tr>
+        <tr><td>Unique booking</td><td>Unique contact with tag <span class="mono">booked call</span> — 129 people ever booked as of 20 Oct.</td><td>Not booking events. C-04 had 16 bookings from 12 leads (some people booked more than once). An older internal qcalls file said 155 lifetime booked — that is likely events, or a later extract.</td></tr>
+        <tr><td>Qualified booking</td><td>Audit rule: <span class="mono">booked call</span> + <span class="mono">mql</span>, and not <span class="mono">unqualified</span>, <span class="mono">no-fit</span>, or <span class="mono">potential-fake</span>. Lifetime 75; 34 in the 1 Apr–14 Oct created cohort.</td><td>Not a field Rob reports. 43 booked contacts are not tagged MQL; 16 booked contacts are also tagged unqualified.</td></tr>
+        <tr><td>Shows</td><td>Rob’s Shows tab (13 named people who took a first call). This is the best April–October source.</td><td>GHL <span class="mono">no-show</span> tags are incomplete (only 33 on 129 booked). Steve said on 4 Nov he had just started marking no-shows by hand. Do not use the early “59% show rate” line from a different window.</td></tr>
+        <tr><td>Sales / accepted practices</td><td>Rob’s YES column: Jones $189k, Ashley $311k, Ohri $190k. Those dollars are his expected annual TrustStar revenue if the panel enrolls, not cash in the bank.</td><td>Do not sum GHL opportunity values. 432 of 670 opportunities are parked at a $10,000 placeholder, including Jones.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="weekly">
+  <div class="hd"><h2>Week by week</h2>
+    <p class="muted">Weeks run Monday–Sunday. Meta spend sits on the day Meta reported it. GHL columns are a <b>lead cohort</b>: people created that week, and whether they later picked up each tag (as of the 20 Oct dump). A September lead who booked in October is counted in September. Rob’s sheet is the opposite style — activity he tallied inside each undated week — so the two tables should not be added together.</p>
+  </div>
+
+  <div class="card glass" style="margin-bottom:12px">
+    <h3>Monthly Meta spend since launch</h3>
+    <div class="legend"><span><i style="background:#fff;opacity:.28"></i>SeniorTech / original account</span><span><i style="background:#F5B544"></i>July 2026 pause / account move</span><span><i style="background:#FF4438"></i>New commercial account (from 20 Aug)</span></div>
+    <svg viewBox="0 0 1040 220" role="img" aria-label="Monthly Meta ad spend from May 2025 through 3 November 2026">
+<line x1="42" y1="172.0" x2="1030" y2="172.0" stroke="rgba(255,255,255,.08)"/>
+<text x="34" y="175.0" text-anchor="end">$0</text>
+<line x1="42" y1="94.0" x2="1030" y2="94.0" stroke="rgba(255,255,255,.08)"/>
+<text x="34" y="97.0" text-anchor="end">$3,357</text>
+<line x1="42" y1="16.0" x2="1030" y2="16.0" stroke="rgba(255,255,255,.08)"/>
+<text x="34" y="19.0" text-anchor="end">$6,715</text>
+<rect x="42.0" y="164.3" width="46.3" height="7.7" rx="3" fill="rgba(255,255,255,.28)"/>
+<text x="65.2" y="202" text-anchor="middle" transform="rotate(-50 65.2 202)">May 25</text>
+<rect x="94.3" y="122.9" width="46.3" height="49.1" rx="3" fill="rgba(255,255,255,.28)"/>
+<text x="117.5" y="202" text-anchor="middle" transform="rotate(-50 117.5 202)">Jun 25</text>
+<rect x="146.6" y="120.3" width="46.3" height="51.7" rx="3" fill="rgba(255,255,255,.28)"/>
+<text x="169.8" y="202" text-anchor="middle" transform="rotate(-50 169.8 202)">Jul 25</text>
+<rect x="198.9" y="76.2" width="46.3" height="95.8" rx="3" fill="rgba(255,255,255,.28)"/>
+<text x="222.1" y="202" text-anchor="middle" transform="rotate(-50 222.1 202)">Aug 25</text>
+<rect x="251.3" y="95.2" width="46.3" height="76.8" rx="3" fill="rgba(255,255,255,.28)"/>
+<text x="274.4" y="202" text-anchor="middle" transform="rotate(-50 274.4 202)">Sep 25</text>
+<rect x="303.6" y="93.8" width="46.3" height="78.2" rx="3" fill="rgba(255,255,255,.28)"/>
+<text x="326.7" y="202" text-anchor="middle" transform="rotate(-50 326.7 202)">Oct 25</text>
+<rect x="355.9" y="132.0" width="46.3" height="40.0" rx="3" fill="rgba(255,255,255,.28)"/>
+<text x="379.1" y="202" text-anchor="middle" transform="rotate(-50 379.1 202)">Nov 25</text>
+<rect x="408.2" y="105.7" width="46.3" height="66.3" rx="3" fill="rgba(255,255,255,.28)"/>
+<text x="431.4" y="202" text-anchor="middle" transform="rotate(-50 431.4 202)">Dec 25</text>
+<rect x="460.5" y="86.2" width="46.3" height="85.8" rx="3" fill="rgba(255,255,255,.28)"/>
+<text x="483.7" y="202" text-anchor="middle" transform="rotate(-50 483.7 202)">Jan 26</text>
+<rect x="512.8" y="97.7" width="46.3" height="74.3" rx="3" fill="rgba(255,255,255,.28)"/>
+<text x="536.0" y="202" text-anchor="middle" transform="rotate(-50 536.0 202)">Feb 26</text>
+<rect x="565.2" y="84.6" width="46.3" height="87.4" rx="3" fill="rgba(255,255,255,.28)"/>
+<text x="588.3" y="202" text-anchor="middle" transform="rotate(-50 588.3 202)">Mar 26</text>
+<rect x="617.5" y="87.3" width="46.3" height="84.7" rx="3" fill="rgba(255,255,255,.28)"/>
+<text x="640.6" y="202" text-anchor="middle" transform="rotate(-50 640.6 202)">Apr 26</text>
+<rect x="669.8" y="86.7" width="46.3" height="85.3" rx="3" fill="rgba(255,255,255,.28)"/>
+<text x="692.9" y="202" text-anchor="middle" transform="rotate(-50 692.9 202)">May 26</text>
+<rect x="722.1" y="88.1" width="46.3" height="83.9" rx="3" fill="rgba(255,255,255,.28)"/>
+<text x="745.3" y="202" text-anchor="middle" transform="rotate(-50 745.3 202)">Jun 26</text>
+<rect x="774.4" y="142.3" width="46.3" height="29.7" rx="3" fill="#F5B544"/>
+<text x="797.6" y="202" text-anchor="middle" transform="rotate(-50 797.6 202)">Jul 26</text>
+<rect x="826.7" y="148.9" width="46.3" height="23.1" rx="3" fill="#FF4438"/>
+<text x="849.9" y="202" text-anchor="middle" transform="rotate(-50 849.9 202)">Aug 26</text>
+<rect x="879.1" y="25.4" width="46.3" height="146.6" rx="3" fill="#FF4438"/>
+<text x="902.2" y="202" text-anchor="middle" transform="rotate(-50 902.2 202)">Sep 26</text>
+<rect x="931.4" y="16.0" width="46.3" height="156.0" rx="3" fill="#FF4438"/>
+<text x="954.5" y="202" text-anchor="middle" transform="rotate(-50 954.5 202)">Oct 26</text>
+<rect x="983.7" y="156.8" width="46.3" height="15.2" rx="3" fill="#FF4438"/>
+<text x="1006.8" y="202" text-anchor="middle" transform="rotate(-50 1006.8 202)">Nov 26</text>
+</svg>
+    <p class="small muted">Original account $42,906.72 and 602 Meta leads (26 May 2025 – 11 Jul 2026). Gap 12 Jul – 19 Aug after the account was blacklisted; new commercial account from 20 Aug per the 24 Aug memo. New account $14,672.39 and 70 Meta leads through 3 Nov. Combined $57,579.11 and 672 Meta lead events. November is only 1–3 Nov ($654.03, one Meta lead).</p>
+  </div>
+
+  <h3 style="margin:22px 0 10px">Rob’s own weeks (April – mid-October 2026)</h3>
+  <p class="small muted">Copied from <span class="mono">Aletto Analysis April-Oct 2026.xlsx</span>, attached to his 19 Oct email. He did not label the start and end date of each week, so these are “April week 1 of 4,” not forced onto our Monday–Sunday grid.</p>
+  <div class="tbl-wrap glass">
+    <table>
+      <thead><tr><th>Row</th><th>Spend</th><th>Leads</th><th>Booked</th><th>Showed</th><th>CPL</th><th>Cost / book</th><th>Cost / show</th><th>Book rate</th></tr></thead>
+      <tbody>
+        <tr class="">
+          <td>April w1</td>
+          <td class="mono">$806</td>
+          <td class="mono">6</td>
+          <td class="mono">3</td>
+          <td class="mono">—</td>
+          <td class="mono">$134.33</td>
+          <td class="mono">$268.67</td>
+          <td class="mono">—</td>
+          <td class="mono">50.0%</td>
+        </tr>
+<tr class="">
+          <td>April w2</td>
+          <td class="mono">$865</td>
+          <td class="mono">13</td>
+          <td class="mono">2</td>
+          <td class="mono">—</td>
+          <td class="mono">$66.54</td>
+          <td class="mono">$432.50</td>
+          <td class="mono">—</td>
+          <td class="mono">15.4%</td>
+        </tr>
+<tr class="">
+          <td>April w3</td>
+          <td class="mono">$826</td>
+          <td class="mono">11</td>
+          <td class="mono">1</td>
+          <td class="mono">—</td>
+          <td class="mono">$75.09</td>
+          <td class="mono">$826.00</td>
+          <td class="mono">—</td>
+          <td class="mono">9.1%</td>
+        </tr>
+<tr class="">
+          <td>April w4</td>
+          <td class="mono">$899</td>
+          <td class="mono">9</td>
+          <td class="mono">1</td>
+          <td class="mono">—</td>
+          <td class="mono">$99.89</td>
+          <td class="mono">$899.00</td>
+          <td class="mono">—</td>
+          <td class="mono">11.1%</td>
+        </tr>
+<tr class="total">
+          <td>April TOTAL (Ohri show)</td>
+          <td class="mono">$3,396</td>
+          <td class="mono">39</td>
+          <td class="mono">7</td>
+          <td class="mono">1</td>
+          <td class="mono">$87.08</td>
+          <td class="mono">$485.14</td>
+          <td class="mono">$3,396.00</td>
+          <td class="mono">17.9%</td>
+        </tr>
+<tr class="">
+          <td>May w1</td>
+          <td class="mono">$829</td>
+          <td class="mono">5</td>
+          <td class="mono">3</td>
+          <td class="mono">—</td>
+          <td class="mono">$165.80</td>
+          <td class="mono">$276.33</td>
+          <td class="mono">—</td>
+          <td class="mono">60.0%</td>
+        </tr>
+<tr class="">
+          <td>May w2</td>
+          <td class="mono">$793</td>
+          <td class="mono">3</td>
+          <td class="mono">0</td>
+          <td class="mono">—</td>
+          <td class="mono">$264.33</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td class="mono">0.0%</td>
+        </tr>
+<tr class="">
+          <td>May w3</td>
+          <td class="mono">$873</td>
+          <td class="mono">8</td>
+          <td class="mono">1</td>
+          <td class="mono">—</td>
+          <td class="mono">$109.12</td>
+          <td class="mono">$873.00</td>
+          <td class="mono">—</td>
+          <td class="mono">12.5%</td>
+        </tr>
+<tr class="">
+          <td>May w4</td>
+          <td class="mono">$834</td>
+          <td class="mono">8</td>
+          <td class="mono">0</td>
+          <td class="mono">—</td>
+          <td class="mono">$104.25</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td class="mono">0.0%</td>
+        </tr>
+<tr class="">
+          <td>May w5</td>
+          <td class="mono">$823</td>
+          <td class="mono">8</td>
+          <td class="mono">1</td>
+          <td class="mono">—</td>
+          <td class="mono">$102.88</td>
+          <td class="mono">$823.00</td>
+          <td class="mono">—</td>
+          <td class="mono">12.5%</td>
+        </tr>
+<tr class="total">
+          <td>May TOTAL (Ashley show)</td>
+          <td class="mono">$4,152</td>
+          <td class="mono">32</td>
+          <td class="mono">5</td>
+          <td class="mono">1</td>
+          <td class="mono">$129.75</td>
+          <td class="mono">$830.40</td>
+          <td class="mono">$4,152.00</td>
+          <td class="mono">15.6%</td>
+        </tr>
+<tr class="">
+          <td>June w1</td>
+          <td class="mono">$835</td>
+          <td class="mono">5</td>
+          <td class="mono">0</td>
+          <td class="mono">—</td>
+          <td class="mono">$167.00</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td class="mono">0.0%</td>
+        </tr>
+<tr class="">
+          <td>June w2</td>
+          <td class="mono">$849</td>
+          <td class="mono">5</td>
+          <td class="mono">0</td>
+          <td class="mono">—</td>
+          <td class="mono">$169.80</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td class="mono">0.0%</td>
+        </tr>
+<tr class="">
+          <td>June w3</td>
+          <td class="mono">$868</td>
+          <td class="mono">2</td>
+          <td class="mono">1</td>
+          <td class="mono">—</td>
+          <td class="mono">$434.00</td>
+          <td class="mono">$868.00</td>
+          <td class="mono">—</td>
+          <td class="mono">50.0%</td>
+        </tr>
+<tr class="">
+          <td>June w4</td>
+          <td class="mono">$847</td>
+          <td class="mono">6</td>
+          <td class="mono">2</td>
+          <td class="mono">—</td>
+          <td class="mono">$141.17</td>
+          <td class="mono">$423.50</td>
+          <td class="mono">—</td>
+          <td class="mono">33.3%</td>
+        </tr>
+<tr class="total">
+          <td>June TOTAL (Imes show)</td>
+          <td class="mono">$3,399</td>
+          <td class="mono">18</td>
+          <td class="mono">3</td>
+          <td class="mono">1</td>
+          <td class="mono">$188.83</td>
+          <td class="mono">$1,133.00</td>
+          <td class="mono">$3,399.00</td>
+          <td class="mono">16.7%</td>
+        </tr>
+<tr class="">
+          <td>July w1</td>
+          <td class="mono">$839</td>
+          <td class="mono">25</td>
+          <td class="mono">3</td>
+          <td class="mono">—</td>
+          <td class="mono">$33.56</td>
+          <td class="mono">$279.67</td>
+          <td class="mono">—</td>
+          <td class="mono">12.0%</td>
+        </tr>
+<tr class="">
+          <td>July w2</td>
+          <td class="mono">$167</td>
+          <td class="mono">10</td>
+          <td class="mono">4</td>
+          <td class="mono">—</td>
+          <td class="mono">$16.70</td>
+          <td class="mono">$41.75</td>
+          <td class="mono">—</td>
+          <td class="mono">40.0%</td>
+        </tr>
+<tr class="">
+          <td>July w3 (paused)</td>
+          <td class="mono">$0</td>
+          <td class="mono">0</td>
+          <td class="mono">0</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>July w4 (paused)</td>
+          <td class="mono">$0</td>
+          <td class="mono">0</td>
+          <td class="mono">0</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="total">
+          <td>July TOTAL (Smith, Klein shows)</td>
+          <td class="mono">$1,006</td>
+          <td class="mono">35</td>
+          <td class="mono">7</td>
+          <td class="mono">2</td>
+          <td class="mono">$28.74</td>
+          <td class="mono">$143.71</td>
+          <td class="mono">$503.00</td>
+          <td class="mono">20.0%</td>
+        </tr>
+<tr class="">
+          <td>August w1</td>
+          <td class="mono">$351</td>
+          <td class="mono">1</td>
+          <td class="mono">0</td>
+          <td class="mono">—</td>
+          <td class="mono">$351.00</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td class="mono">0.0%</td>
+        </tr>
+<tr class="">
+          <td>August w2</td>
+          <td class="mono">$1,154</td>
+          <td class="mono">10</td>
+          <td class="mono">3</td>
+          <td class="mono">—</td>
+          <td class="mono">$115.40</td>
+          <td class="mono">$384.67</td>
+          <td class="mono">—</td>
+          <td class="mono">30.0%</td>
+        </tr>
+<tr class="">
+          <td>August w3 (paused)</td>
+          <td class="mono">$0</td>
+          <td class="mono">0</td>
+          <td class="mono">0</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>August w4 (paused)</td>
+          <td class="mono">$0</td>
+          <td class="mono">0</td>
+          <td class="mono">0</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="total">
+          <td>August TOTAL (Rashid show)</td>
+          <td class="mono">$1,505</td>
+          <td class="mono">11</td>
+          <td class="mono">3</td>
+          <td class="mono">1</td>
+          <td class="mono">$136.82</td>
+          <td class="mono">$501.67</td>
+          <td class="mono">$1,505.00</td>
+          <td class="mono">27.3%</td>
+        </tr>
+<tr class="">
+          <td>September w1</td>
+          <td class="mono">$1,056</td>
+          <td class="mono">6</td>
+          <td class="mono">2</td>
+          <td class="mono">—</td>
+          <td class="mono">$176.00</td>
+          <td class="mono">$528.00</td>
+          <td class="mono">—</td>
+          <td class="mono">33.3%</td>
+        </tr>
+<tr class="">
+          <td>September w2</td>
+          <td class="mono">$1,940</td>
+          <td class="mono">24</td>
+          <td class="mono">4</td>
+          <td class="mono">—</td>
+          <td class="mono">$80.83</td>
+          <td class="mono">$485.00</td>
+          <td class="mono">—</td>
+          <td class="mono">16.7%</td>
+        </tr>
+<tr class="">
+          <td>September w3</td>
+          <td class="mono">$1,485</td>
+          <td class="mono">21</td>
+          <td class="mono">7</td>
+          <td class="mono">—</td>
+          <td class="mono">$70.71</td>
+          <td class="mono">$212.14</td>
+          <td class="mono">—</td>
+          <td class="mono">33.3%</td>
+        </tr>
+<tr class="">
+          <td>September w4</td>
+          <td class="mono">$1,545</td>
+          <td class="mono">19</td>
+          <td class="mono">7</td>
+          <td class="mono">—</td>
+          <td class="mono">$81.32</td>
+          <td class="mono">$220.71</td>
+          <td class="mono">—</td>
+          <td class="mono">36.8%</td>
+        </tr>
+<tr class="total">
+          <td>September TOTAL (Jones, Gupta, Gaber shows)</td>
+          <td class="mono">$6,026</td>
+          <td class="mono">70</td>
+          <td class="mono">20</td>
+          <td class="mono">3</td>
+          <td class="mono">$86.09</td>
+          <td class="mono">$301.30</td>
+          <td class="mono">$2,008.67</td>
+          <td class="mono">28.6%</td>
+        </tr>
+<tr class="">
+          <td>October w1</td>
+          <td class="mono">$1,507</td>
+          <td class="mono">17</td>
+          <td class="mono">7</td>
+          <td class="mono">—</td>
+          <td class="mono">$88.65</td>
+          <td class="mono">$215.29</td>
+          <td class="mono">—</td>
+          <td class="mono">41.2%</td>
+        </tr>
+<tr class="">
+          <td>October w2</td>
+          <td class="mono">$1,493</td>
+          <td class="mono">7</td>
+          <td class="mono">5</td>
+          <td class="mono">—</td>
+          <td class="mono">$213.29</td>
+          <td class="mono">$298.60</td>
+          <td class="mono">—</td>
+          <td class="mono">71.4%</td>
+        </tr>
+<tr class="total">
+          <td>October TOTAL (Slaughter, Blanc, Pimentel shows)</td>
+          <td class="mono">$3,000</td>
+          <td class="mono">24</td>
+          <td class="mono">12</td>
+          <td class="mono">3</td>
+          <td class="mono">$125.00</td>
+          <td class="mono">$250.00</td>
+          <td class="mono">$1,000.00</td>
+          <td class="mono">50.0%</td>
+        </tr>
+<tr class="total">
+          <td>SUM as written in sheet</td>
+          <td class="mono">$22,484</td>
+          <td class="mono">229</td>
+          <td class="mono">57</td>
+          <td class="mono">12</td>
+          <td class="mono">$98.18</td>
+          <td class="mono">$394.46</td>
+          <td class="mono">$1,873.67</td>
+          <td class="mono">24.9%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 style="margin:28px 0 10px">Relaunch weeks — Meta + GHL cohort (from 17 Aug 2026)</h3>
+  <p class="small muted">Yellow rows are partial. GHL stops on 20 Oct, so the weeks of 19 Oct (partial), 26 Oct and 2 Nov cannot be read as “zero bookings.” Meta stops on 3 Nov, so the week of 2 Nov is two spend-days only ($420.54, one Meta lead). The CEO weekly-report window of 29 Oct – 4 Nov is $1,244.41 and 5 Meta leads — that is 29 Oct through 3 Nov, because 4 Nov is missing from the cache.</p>
+  <div class="tbl-wrap glass">
+    <table>
+      <thead><tr><th>Week (Mon–Sun)</th><th>Meta spend</th><th>Meta lead events</th><th>CPL (Meta)</th><th>GHL opt-ins created</th><th>Of those, later MQL</th><th>Of those, later booked</th><th>Qualified bookings</th><th>Cost / qual. booking</th></tr></thead>
+      <tbody>
+        <tr class="partial">
+          <td>2026-08-17 – 2026-08-23<span class="note-chip">PARTIAL: Meta has 1 spend-days this week (zero-spend days may be omitted from cache).</span></td>
+          <td class="mono">$3.11</td>
+          <td class="mono">0</td>
+          <td class="mono">—</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2026-08-24 – 2026-08-30</td>
+          <td class="mono">$871.23</td>
+          <td class="mono">7</td>
+          <td class="mono">$124.46</td>
+          <td>4</td>
+          <td>3</td>
+          <td>1</td>
+          <td>1</td>
+          <td class="mono">$871.23</td>
+        </tr>
+<tr class="partial">
+          <td>2026-08-31 – 2026-09-06<span class="note-chip">PARTIAL: Meta has 6 spend-days this week (zero-spend days may be omitted from cache).</span></td>
+          <td class="mono">$890.05</td>
+          <td class="mono">5</td>
+          <td class="mono">$178.01</td>
+          <td>6</td>
+          <td>5</td>
+          <td>3</td>
+          <td>3</td>
+          <td class="mono">$296.68</td>
+        </tr>
+<tr class="partial">
+          <td>2026-09-07 – 2026-09-13<span class="note-chip">PARTIAL: Meta has 6 spend-days this week (zero-spend days may be omitted from cache).</span></td>
+          <td class="mono">$1,739.59</td>
+          <td class="mono">7</td>
+          <td class="mono">$248.51</td>
+          <td>12</td>
+          <td>7</td>
+          <td>4</td>
+          <td>4</td>
+          <td class="mono">$434.90</td>
+        </tr>
+<tr class="">
+          <td>2026-09-14 – 2026-09-20</td>
+          <td class="mono">$1,578.53</td>
+          <td class="mono">15</td>
+          <td class="mono">$105.24</td>
+          <td>25</td>
+          <td>17</td>
+          <td>5</td>
+          <td>5</td>
+          <td class="mono">$315.71</td>
+        </tr>
+<tr class="">
+          <td>2026-09-21 – 2026-09-27</td>
+          <td class="mono">$1,498.32</td>
+          <td class="mono">5</td>
+          <td class="mono">$299.66</td>
+          <td>19</td>
+          <td>9</td>
+          <td>4</td>
+          <td>3</td>
+          <td class="mono">$499.44</td>
+        </tr>
+<tr class="">
+          <td>2026-09-28 – 2026-10-04</td>
+          <td class="mono">$1,572.31</td>
+          <td class="mono">9</td>
+          <td class="mono">$174.70</td>
+          <td>14</td>
+          <td>11</td>
+          <td>5</td>
+          <td>2</td>
+          <td class="mono">$786.15</td>
+        </tr>
+<tr class="">
+          <td>2026-10-05 – 2026-10-11</td>
+          <td class="mono">$1,517.15</td>
+          <td class="mono">4</td>
+          <td class="mono">$379.29</td>
+          <td>9</td>
+          <td>8</td>
+          <td>5</td>
+          <td>3</td>
+          <td class="mono">$505.72</td>
+        </tr>
+<tr class="">
+          <td>2026-10-12 – 2026-10-18</td>
+          <td class="mono">$1,503.86</td>
+          <td class="mono">3</td>
+          <td class="mono">$501.29</td>
+          <td>2</td>
+          <td>5</td>
+          <td>3</td>
+          <td>3</td>
+          <td class="mono">$501.29</td>
+        </tr>
+<tr class="partial">
+          <td>2026-10-19 – 2026-10-25<span class="note-chip">GHL dump ends 2026-10-20; this week is incomplete in GHL.</span></td>
+          <td class="mono">$1,572.01</td>
+          <td class="mono">8</td>
+          <td class="mono">$196.50</td>
+          <td title="GHL incomplete after 20 Oct">4*</td>
+          <td title="GHL incomplete after 20 Oct">3*</td>
+          <td title="GHL incomplete after 20 Oct">0*</td>
+          <td title="GHL incomplete after 20 Oct">0*</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="partial">
+          <td>2026-10-26 – 2026-11-01<span class="note-chip">GHL dump ends 2026-10-20; no live subaccount access after that.</span></td>
+          <td class="mono">$1,505.69</td>
+          <td class="mono">6</td>
+          <td class="mono">$250.95</td>
+          <td class="na">n/a</td>
+          <td class="na">n/a</td>
+          <td class="na">n/a</td>
+          <td class="na">n/a</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="partial">
+          <td>2026-11-02 – 2026-11-08<span class="note-chip">PARTIAL: Meta only through 2026-11-03 (2 of 7 days). No Nov 4–6. | GHL dump ends 2026-10-20; no live subaccount access after that.</span></td>
+          <td class="mono">$420.54</td>
+          <td class="mono">1</td>
+          <td class="mono">$420.54</td>
+          <td class="na">n/a</td>
+          <td class="na">n/a</td>
+          <td class="na">n/a</td>
+          <td class="na">n/a</td>
+          <td class="mono">—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small muted" style="margin-top:8px">Last four complete weeks average spend <b>$1,524.68</b> ($6,098.71 total, 21 Meta lead events, Meta CPL $290.41). Dashboard snapshot for 21–27 Oct (updated 28 Oct, 17:30 ET / 23:30 Europe/Madrid): spend $1,506.37, 11 leads, CPL $136.94, 8 MQLs, 4 booked calls, $376.59 per booked call. That dashboard row is activity-in-week, not the GHL created-that-week cohort above.</p>
+
+  <details class="box glass" style="margin-top:14px">
+    <summary>Full Monday–Sunday series since 26 May 2025 (76 weeks) — Meta + GHL cohort</summary>
+    <p class="small muted">Download the raw file: <a href="exports/weekly_meta_ghl_cohort.csv">weekly_meta_ghl_cohort.csv</a></p>
+    <div class="tbl-wrap" style="border:0">
+      <table>
+        <thead><tr><th>Week (Mon–Sun)</th><th>Meta spend</th><th>Meta lead events</th><th>CPL (Meta)</th><th>GHL opt-ins created</th><th>Of those, later MQL</th><th>Of those, later booked</th><th>Qualified bookings</th><th>Cost / qual. booking</th></tr></thead>
+        <tbody>
+          <tr class="">
+          <td>2025-05-26 – 2025-06-01</td>
+          <td class="mono">$414.54</td>
+          <td class="mono">12</td>
+          <td class="mono">$34.54</td>
+          <td>12</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2025-06-02 – 2025-06-08</td>
+          <td class="mono">$491.37</td>
+          <td class="mono">66</td>
+          <td class="mono">$7.45</td>
+          <td>17</td>
+          <td>1</td>
+          <td>4</td>
+          <td>1</td>
+          <td class="mono">$491.37</td>
+        </tr>
+<tr class="">
+          <td>2025-06-09 – 2025-06-15</td>
+          <td class="mono">$488.21</td>
+          <td class="mono">22</td>
+          <td class="mono">$22.19</td>
+          <td>18</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2025-06-16 – 2025-06-22</td>
+          <td class="mono">$487.68</td>
+          <td class="mono">19</td>
+          <td class="mono">$25.67</td>
+          <td>17</td>
+          <td>2</td>
+          <td>2</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2025-06-23 – 2025-06-29</td>
+          <td class="mono">$484.80</td>
+          <td class="mono">16</td>
+          <td class="mono">$30.30</td>
+          <td>16</td>
+          <td>4</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2025-06-30 – 2025-07-06</td>
+          <td class="mono">$489.35</td>
+          <td class="mono">39</td>
+          <td class="mono">$12.55</td>
+          <td>14</td>
+          <td>2</td>
+          <td>4</td>
+          <td>2</td>
+          <td class="mono">$244.67</td>
+        </tr>
+<tr class="">
+          <td>2025-07-07 – 2025-07-13</td>
+          <td class="mono">$487.28</td>
+          <td class="mono">20</td>
+          <td class="mono">$24.36</td>
+          <td>16</td>
+          <td>2</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2025-07-14 – 2025-07-20</td>
+          <td class="mono">$496.33</td>
+          <td class="mono">26</td>
+          <td class="mono">$19.09</td>
+          <td>21</td>
+          <td>2</td>
+          <td>6</td>
+          <td>2</td>
+          <td class="mono">$248.17</td>
+        </tr>
+<tr class="">
+          <td>2025-07-21 – 2025-07-27</td>
+          <td class="mono">$484.81</td>
+          <td class="mono">17</td>
+          <td class="mono">$28.52</td>
+          <td>11</td>
+          <td>3</td>
+          <td>3</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2025-07-28 – 2025-08-03</td>
+          <td class="mono">$720.71</td>
+          <td class="mono">29</td>
+          <td class="mono">$24.85</td>
+          <td>20</td>
+          <td>2</td>
+          <td>6</td>
+          <td>1</td>
+          <td class="mono">$720.71</td>
+        </tr>
+<tr class="">
+          <td>2025-08-04 – 2025-08-10</td>
+          <td class="mono">$921.50</td>
+          <td class="mono">23</td>
+          <td class="mono">$40.07</td>
+          <td>18</td>
+          <td>14</td>
+          <td>4</td>
+          <td>2</td>
+          <td class="mono">$460.75</td>
+        </tr>
+<tr class="">
+          <td>2025-08-11 – 2025-08-17</td>
+          <td class="mono">$948.35</td>
+          <td class="mono">22</td>
+          <td class="mono">$43.11</td>
+          <td>14</td>
+          <td>13</td>
+          <td>4</td>
+          <td>4</td>
+          <td class="mono">$237.09</td>
+        </tr>
+<tr class="">
+          <td>2025-08-18 – 2025-08-24</td>
+          <td class="mono">$945.30</td>
+          <td class="mono">11</td>
+          <td class="mono">$85.94</td>
+          <td>8</td>
+          <td>7</td>
+          <td>2</td>
+          <td>2</td>
+          <td class="mono">$472.65</td>
+        </tr>
+<tr class="">
+          <td>2025-08-25 – 2025-08-31</td>
+          <td class="mono">$933.06</td>
+          <td class="mono">30</td>
+          <td class="mono">$31.10</td>
+          <td>22</td>
+          <td>16</td>
+          <td>6</td>
+          <td>5</td>
+          <td class="mono">$186.61</td>
+        </tr>
+<tr class="">
+          <td>2025-09-01 – 2025-09-07</td>
+          <td class="mono">$948.71</td>
+          <td class="mono">16</td>
+          <td class="mono">$59.29</td>
+          <td>11</td>
+          <td>11</td>
+          <td>4</td>
+          <td>4</td>
+          <td class="mono">$237.18</td>
+        </tr>
+<tr class="">
+          <td>2025-09-08 – 2025-09-14</td>
+          <td class="mono">$988.22</td>
+          <td class="mono">23</td>
+          <td class="mono">$42.97</td>
+          <td>12</td>
+          <td>10</td>
+          <td>2</td>
+          <td>1</td>
+          <td class="mono">$988.22</td>
+        </tr>
+<tr class="">
+          <td>2025-09-15 – 2025-09-21</td>
+          <td class="mono">$734.19</td>
+          <td class="mono">12</td>
+          <td class="mono">$61.18</td>
+          <td>9</td>
+          <td>4</td>
+          <td>1</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2025-09-22 – 2025-09-28</td>
+          <td class="mono">$488.76</td>
+          <td class="mono">5</td>
+          <td class="mono">$97.75</td>
+          <td>4</td>
+          <td>0</td>
+          <td>1</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2025-09-29 – 2025-10-05</td>
+          <td class="mono">$1,029.33</td>
+          <td class="mono">10</td>
+          <td class="mono">$102.93</td>
+          <td>9</td>
+          <td>1</td>
+          <td>2</td>
+          <td>1</td>
+          <td class="mono">$1,029.33</td>
+        </tr>
+<tr class="">
+          <td>2025-10-06 – 2025-10-12</td>
+          <td class="mono">$707.31</td>
+          <td class="mono">10</td>
+          <td class="mono">$70.73</td>
+          <td>8</td>
+          <td>0</td>
+          <td>1</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2025-10-13 – 2025-10-19</td>
+          <td class="mono">$498.58</td>
+          <td class="mono">11</td>
+          <td class="mono">$45.33</td>
+          <td>8</td>
+          <td>2</td>
+          <td>2</td>
+          <td>1</td>
+          <td class="mono">$498.58</td>
+        </tr>
+<tr class="">
+          <td>2025-10-20 – 2025-10-26</td>
+          <td class="mono">$642.23</td>
+          <td class="mono">6</td>
+          <td class="mono">$107.04</td>
+          <td>5</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2025-10-27 – 2025-11-02</td>
+          <td class="mono">$978.03</td>
+          <td class="mono">8</td>
+          <td class="mono">$122.25</td>
+          <td>8</td>
+          <td>1</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2025-11-03 – 2025-11-09</td>
+          <td class="mono">$893.96</td>
+          <td class="mono">14</td>
+          <td class="mono">$63.85</td>
+          <td>11</td>
+          <td>1</td>
+          <td>4</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="partial">
+          <td>2025-11-10 – 2025-11-16<span class="note-chip">PARTIAL: Meta has 5 spend-days this week (zero-spend days may be omitted from cache).</span></td>
+          <td class="mono">$487.51</td>
+          <td class="mono">8</td>
+          <td class="mono">$60.94</td>
+          <td>6</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2025-11-17 – 2025-11-23</td>
+          <td class="mono">$0.00</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2025-11-24 – 2025-11-30</td>
+          <td class="mono">$0.00</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="partial">
+          <td>2025-12-01 – 2025-12-07<span class="note-chip">PARTIAL: Meta has 4 spend-days this week (zero-spend days may be omitted from cache).</span></td>
+          <td class="mono">$388.27</td>
+          <td class="mono">1</td>
+          <td class="mono">$388.27</td>
+          <td>6</td>
+          <td>1</td>
+          <td>2</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2025-12-08 – 2025-12-14</td>
+          <td class="mono">$605.88</td>
+          <td class="mono">1</td>
+          <td class="mono">$605.88</td>
+          <td>2</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td class="mono">$605.88</td>
+        </tr>
+<tr class="">
+          <td>2025-12-15 – 2025-12-21</td>
+          <td class="mono">$647.07</td>
+          <td class="mono">0</td>
+          <td class="mono">—</td>
+          <td>4</td>
+          <td>3</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2025-12-22 – 2025-12-28</td>
+          <td class="mono">$853.76</td>
+          <td class="mono">0</td>
+          <td class="mono">—</td>
+          <td>14</td>
+          <td>9</td>
+          <td>2</td>
+          <td>2</td>
+          <td class="mono">$426.88</td>
+        </tr>
+<tr class="">
+          <td>2025-12-29 – 2026-01-04</td>
+          <td class="mono">$831.10</td>
+          <td class="mono">0</td>
+          <td class="mono">—</td>
+          <td>10</td>
+          <td>7</td>
+          <td>1</td>
+          <td>1</td>
+          <td class="mono">$831.10</td>
+        </tr>
+<tr class="">
+          <td>2026-01-05 – 2026-01-11</td>
+          <td class="mono">$841.66</td>
+          <td class="mono">0</td>
+          <td class="mono">—</td>
+          <td>8</td>
+          <td>7</td>
+          <td>2</td>
+          <td>1</td>
+          <td class="mono">$841.66</td>
+        </tr>
+<tr class="">
+          <td>2026-01-12 – 2026-01-18</td>
+          <td class="mono">$809.16</td>
+          <td class="mono">0</td>
+          <td class="mono">—</td>
+          <td>5</td>
+          <td>3</td>
+          <td>1</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2026-01-19 – 2026-01-25</td>
+          <td class="mono">$949.90</td>
+          <td class="mono">0</td>
+          <td class="mono">—</td>
+          <td>14</td>
+          <td>12</td>
+          <td>1</td>
+          <td>1</td>
+          <td class="mono">$949.90</td>
+        </tr>
+<tr class="">
+          <td>2026-01-26 – 2026-02-01</td>
+          <td class="mono">$760.98</td>
+          <td class="mono">0</td>
+          <td class="mono">—</td>
+          <td>9</td>
+          <td>7</td>
+          <td>1</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2026-02-02 – 2026-02-08</td>
+          <td class="mono">$769.72</td>
+          <td class="mono">0</td>
+          <td class="mono">—</td>
+          <td>6</td>
+          <td>6</td>
+          <td>1</td>
+          <td>1</td>
+          <td class="mono">$769.72</td>
+        </tr>
+<tr class="">
+          <td>2026-02-09 – 2026-02-15</td>
+          <td class="mono">$770.37</td>
+          <td class="mono">0</td>
+          <td class="mono">—</td>
+          <td>4</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2026-02-16 – 2026-02-22</td>
+          <td class="mono">$762.44</td>
+          <td class="mono">0</td>
+          <td class="mono">—</td>
+          <td>5</td>
+          <td>3</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2026-02-23 – 2026-03-01</td>
+          <td class="mono">$912.89</td>
+          <td class="mono">4</td>
+          <td class="mono">$228.22</td>
+          <td>10</td>
+          <td>5</td>
+          <td>1</td>
+          <td>1</td>
+          <td class="mono">$912.89</td>
+        </tr>
+<tr class="">
+          <td>2026-03-02 – 2026-03-08</td>
+          <td class="mono">$826.83</td>
+          <td class="mono">3</td>
+          <td class="mono">$275.61</td>
+          <td>6</td>
+          <td>4</td>
+          <td>1</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2026-03-09 – 2026-03-15</td>
+          <td class="mono">$843.73</td>
+          <td class="mono">4</td>
+          <td class="mono">$210.93</td>
+          <td>9</td>
+          <td>3</td>
+          <td>2</td>
+          <td>2</td>
+          <td class="mono">$421.87</td>
+        </tr>
+<tr class="">
+          <td>2026-03-16 – 2026-03-22</td>
+          <td class="mono">$825.55</td>
+          <td class="mono">4</td>
+          <td class="mono">$206.39</td>
+          <td>11</td>
+          <td>6</td>
+          <td>1</td>
+          <td>1</td>
+          <td class="mono">$825.55</td>
+        </tr>
+<tr class="">
+          <td>2026-03-23 – 2026-03-29</td>
+          <td class="mono">$827.63</td>
+          <td class="mono">8</td>
+          <td class="mono">$103.45</td>
+          <td>9</td>
+          <td>7</td>
+          <td>2</td>
+          <td>1</td>
+          <td class="mono">$827.63</td>
+        </tr>
+<tr class="">
+          <td>2026-03-30 – 2026-04-05</td>
+          <td class="mono">$874.37</td>
+          <td class="mono">2</td>
+          <td class="mono">$437.19</td>
+          <td>8</td>
+          <td>2</td>
+          <td>3</td>
+          <td>1</td>
+          <td class="mono">$874.37</td>
+        </tr>
+<tr class="">
+          <td>2026-04-06 – 2026-04-12</td>
+          <td class="mono">$842.62</td>
+          <td class="mono">9</td>
+          <td class="mono">$93.62</td>
+          <td>11</td>
+          <td>10</td>
+          <td>2</td>
+          <td>1</td>
+          <td class="mono">$842.62</td>
+        </tr>
+<tr class="">
+          <td>2026-04-13 – 2026-04-19</td>
+          <td class="mono">$827.79</td>
+          <td class="mono">12</td>
+          <td class="mono">$68.98</td>
+          <td>10</td>
+          <td>9</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2026-04-20 – 2026-04-26</td>
+          <td class="mono">$838.10</td>
+          <td class="mono">7</td>
+          <td class="mono">$119.73</td>
+          <td>8</td>
+          <td>6</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2026-04-27 – 2026-05-03</td>
+          <td class="mono">$844.20</td>
+          <td class="mono">7</td>
+          <td class="mono">$120.60</td>
+          <td>7</td>
+          <td>7</td>
+          <td>1</td>
+          <td>1</td>
+          <td class="mono">$844.20</td>
+        </tr>
+<tr class="">
+          <td>2026-05-04 – 2026-05-10</td>
+          <td class="mono">$844.65</td>
+          <td class="mono">6</td>
+          <td class="mono">$140.78</td>
+          <td>9</td>
+          <td>7</td>
+          <td>3</td>
+          <td>2</td>
+          <td class="mono">$422.32</td>
+        </tr>
+<tr class="">
+          <td>2026-05-11 – 2026-05-17</td>
+          <td class="mono">$841.89</td>
+          <td class="mono">3</td>
+          <td class="mono">$280.63</td>
+          <td>3</td>
+          <td>2</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2026-05-18 – 2026-05-24</td>
+          <td class="mono">$837.10</td>
+          <td class="mono">4</td>
+          <td class="mono">$209.28</td>
+          <td>7</td>
+          <td>6</td>
+          <td>1</td>
+          <td>1</td>
+          <td class="mono">$837.10</td>
+        </tr>
+<tr class="">
+          <td>2026-05-25 – 2026-05-31</td>
+          <td class="mono">$852.03</td>
+          <td class="mono">8</td>
+          <td class="mono">$106.50</td>
+          <td>7</td>
+          <td>6</td>
+          <td>2</td>
+          <td>2</td>
+          <td class="mono">$426.01</td>
+        </tr>
+<tr class="">
+          <td>2026-06-01 – 2026-06-07</td>
+          <td class="mono">$836.92</td>
+          <td class="mono">3</td>
+          <td class="mono">$278.97</td>
+          <td>5</td>
+          <td>4</td>
+          <td>1</td>
+          <td>1</td>
+          <td class="mono">$836.92</td>
+        </tr>
+<tr class="">
+          <td>2026-06-08 – 2026-06-14</td>
+          <td class="mono">$847.58</td>
+          <td class="mono">7</td>
+          <td class="mono">$121.08</td>
+          <td>6</td>
+          <td>6</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2026-06-15 – 2026-06-21</td>
+          <td class="mono">$836.11</td>
+          <td class="mono">4</td>
+          <td class="mono">$209.03</td>
+          <td>2</td>
+          <td>2</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2026-06-22 – 2026-06-28</td>
+          <td class="mono">$829.27</td>
+          <td class="mono">7</td>
+          <td class="mono">$118.47</td>
+          <td>4</td>
+          <td>2</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2026-06-29 – 2026-07-05</td>
+          <td class="mono">$902.35</td>
+          <td class="mono">8</td>
+          <td class="mono">$112.79</td>
+          <td>13</td>
+          <td>10</td>
+          <td>5</td>
+          <td>3</td>
+          <td class="mono">$300.78</td>
+        </tr>
+<tr class="partial">
+          <td>2026-07-06 – 2026-07-12<span class="note-chip">PARTIAL: Meta has 6 spend-days this week (zero-spend days may be omitted from cache).</span></td>
+          <td class="mono">$634.68</td>
+          <td class="mono">15</td>
+          <td class="mono">$42.31</td>
+          <td>24</td>
+          <td>12</td>
+          <td>4</td>
+          <td>1</td>
+          <td class="mono">$634.68</td>
+        </tr>
+<tr class="">
+          <td>2026-07-13 – 2026-07-19</td>
+          <td class="mono">$0.00</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2026-07-20 – 2026-07-26</td>
+          <td class="mono">$0.00</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2026-07-27 – 2026-08-02</td>
+          <td class="mono">$0.00</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2026-08-03 – 2026-08-09</td>
+          <td class="mono">$0.00</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2026-08-10 – 2026-08-16</td>
+          <td class="mono">$0.00</td>
+          <td class="mono">—</td>
+          <td class="mono">—</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="partial">
+          <td>2026-08-17 – 2026-08-23<span class="note-chip">PARTIAL: Meta has 1 spend-days this week (zero-spend days may be omitted from cache).</span></td>
+          <td class="mono">$3.11</td>
+          <td class="mono">0</td>
+          <td class="mono">—</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="">
+          <td>2026-08-24 – 2026-08-30</td>
+          <td class="mono">$871.23</td>
+          <td class="mono">7</td>
+          <td class="mono">$124.46</td>
+          <td>4</td>
+          <td>3</td>
+          <td>1</td>
+          <td>1</td>
+          <td class="mono">$871.23</td>
+        </tr>
+<tr class="partial">
+          <td>2026-08-31 – 2026-09-06<span class="note-chip">PARTIAL: Meta has 6 spend-days this week (zero-spend days may be omitted from cache).</span></td>
+          <td class="mono">$890.05</td>
+          <td class="mono">5</td>
+          <td class="mono">$178.01</td>
+          <td>6</td>
+          <td>5</td>
+          <td>3</td>
+          <td>3</td>
+          <td class="mono">$296.68</td>
+        </tr>
+<tr class="partial">
+          <td>2026-09-07 – 2026-09-13<span class="note-chip">PARTIAL: Meta has 6 spend-days this week (zero-spend days may be omitted from cache).</span></td>
+          <td class="mono">$1,739.59</td>
+          <td class="mono">7</td>
+          <td class="mono">$248.51</td>
+          <td>12</td>
+          <td>7</td>
+          <td>4</td>
+          <td>4</td>
+          <td class="mono">$434.90</td>
+        </tr>
+<tr class="">
+          <td>2026-09-14 – 2026-09-20</td>
+          <td class="mono">$1,578.53</td>
+          <td class="mono">15</td>
+          <td class="mono">$105.24</td>
+          <td>25</td>
+          <td>17</td>
+          <td>5</td>
+          <td>5</td>
+          <td class="mono">$315.71</td>
+        </tr>
+<tr class="">
+          <td>2026-09-21 – 2026-09-27</td>
+          <td class="mono">$1,498.32</td>
+          <td class="mono">5</td>
+          <td class="mono">$299.66</td>
+          <td>19</td>
+          <td>9</td>
+          <td>4</td>
+          <td>3</td>
+          <td class="mono">$499.44</td>
+        </tr>
+<tr class="">
+          <td>2026-09-28 – 2026-10-04</td>
+          <td class="mono">$1,572.31</td>
+          <td class="mono">9</td>
+          <td class="mono">$174.70</td>
+          <td>14</td>
+          <td>11</td>
+          <td>5</td>
+          <td>2</td>
+          <td class="mono">$786.15</td>
+        </tr>
+<tr class="">
+          <td>2026-10-05 – 2026-10-11</td>
+          <td class="mono">$1,517.15</td>
+          <td class="mono">4</td>
+          <td class="mono">$379.29</td>
+          <td>9</td>
+          <td>8</td>
+          <td>5</td>
+          <td>3</td>
+          <td class="mono">$505.72</td>
+        </tr>
+<tr class="">
+          <td>2026-10-12 – 2026-10-18</td>
+          <td class="mono">$1,503.86</td>
+          <td class="mono">3</td>
+          <td class="mono">$501.29</td>
+          <td>2</td>
+          <td>5</td>
+          <td>3</td>
+          <td>3</td>
+          <td class="mono">$501.29</td>
+        </tr>
+<tr class="partial">
+          <td>2026-10-19 – 2026-10-25<span class="note-chip">GHL dump ends 2026-10-20; this week is incomplete in GHL.</span></td>
+          <td class="mono">$1,572.01</td>
+          <td class="mono">8</td>
+          <td class="mono">$196.50</td>
+          <td title="GHL incomplete after 20 Oct">4*</td>
+          <td title="GHL incomplete after 20 Oct">3*</td>
+          <td title="GHL incomplete after 20 Oct">0*</td>
+          <td title="GHL incomplete after 20 Oct">0*</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="partial">
+          <td>2026-10-26 – 2026-11-01<span class="note-chip">GHL dump ends 2026-10-20; no live subaccount access after that.</span></td>
+          <td class="mono">$1,505.69</td>
+          <td class="mono">6</td>
+          <td class="mono">$250.95</td>
+          <td class="na">n/a</td>
+          <td class="na">n/a</td>
+          <td class="na">n/a</td>
+          <td class="na">n/a</td>
+          <td class="mono">—</td>
+        </tr>
+<tr class="partial">
+          <td>2026-11-02 – 2026-11-08<span class="note-chip">PARTIAL: Meta only through 2026-11-03 (2 of 7 days). No Nov 4–6. | GHL dump ends 2026-10-20; no live subaccount access after that.</span></td>
+          <td class="mono">$420.54</td>
+          <td class="mono">1</td>
+          <td class="mono">$420.54</td>
+          <td class="na">n/a</td>
+          <td class="na">n/a</td>
+          <td class="na">n/a</td>
+          <td class="na">n/a</td>
+          <td class="mono">—</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+</section>
+
+<section id="shows">
+  <div class="hd"><h2>Every named show, and what happened next</h2>
+    <p class="muted">From Rob’s Shows tab, 19 Oct 2026. Green = YES. These are physician practices buying RPM/CCM — the “clients coming from them.”</p>
+  </div>
+  <div class="tbl-wrap glass">
+    <table>
+      <thead><tr><th>Name</th><th>Showed</th><th>Contact created</th><th>Days</th><th>Proposal</th><th>Proposal date</th><th>Sale</th><th>Annual value he wrote</th><th>Status in his words</th></tr></thead>
+      <tbody><tr class="">
+          <td>Lillie Slaughter</td>
+          <td>2026-10-06</td>
+          <td>2026-10-05</td>
+          <td class="mono">1</td>
+          <td>Yes</td>
+          <td>2026-10-06</td>
+          <td><b>—</b></td>
+          <td class="mono">—</td>
+          <td>in progress, working</td>
+        </tr>
+<tr class="">
+          <td>Jocelyne Blanc</td>
+          <td>2026-10-07</td>
+          <td>2026-09-29</td>
+          <td class="mono">8</td>
+          <td>Yes</td>
+          <td>2026-10-05</td>
+          <td><b>—</b></td>
+          <td class="mono">—</td>
+          <td>in progress, working</td>
+        </tr>
+<tr class="">
+          <td>Ramon R. Pimentel</td>
+          <td>2026-10-07</td>
+          <td>2026-03-13</td>
+          <td class="mono">208</td>
+          <td>Yes</td>
+          <td>2026-10-13</td>
+          <td><b>—</b></td>
+          <td class="mono">—</td>
+          <td>in progress, working</td>
+        </tr>
+<tr class="yes">
+          <td>Mike Jones</td>
+          <td>2026-09-10</td>
+          <td>2026-09-10</td>
+          <td class="mono">0</td>
+          <td>Yes</td>
+          <td>2026-09-21</td>
+          <td><b>YES</b></td>
+          <td class="mono">$189,000</td>
+          <td>Onboarding started late September</td>
+        </tr>
+<tr class="no">
+          <td>Leonard Shirman</td>
+          <td>2026-10-01</td>
+          <td>2026-09-24</td>
+          <td class="mono">7</td>
+          <td>NO BID</td>
+          <td>—</td>
+          <td><b>NO BID</b></td>
+          <td class="mono">—</td>
+          <td>Wanted all Russian-speaking care coordinators</td>
+        </tr>
+<tr class="">
+          <td>Anand Gupta</td>
+          <td>2026-09-28</td>
+          <td>2026-09-27</td>
+          <td class="mono">1</td>
+          <td>CHASING</td>
+          <td>—</td>
+          <td><b>—</b></td>
+          <td class="mono">—</td>
+          <td>Chasing them to have an initial discovery call</td>
+        </tr>
+<tr class="">
+          <td>Ed Gaber</td>
+          <td>2026-09-01</td>
+          <td>2026-08-31</td>
+          <td class="mono">1</td>
+          <td>Yes</td>
+          <td>2026-09-04</td>
+          <td><b>—</b></td>
+          <td class="mono">—</td>
+          <td>in progress, working</td>
+        </tr>
+<tr class="no">
+          <td>Rashid Cardiology</td>
+          <td>2026-08-06</td>
+          <td>2026-07-10</td>
+          <td class="mono">27</td>
+          <td>Yes</td>
+          <td>2026-07-17</td>
+          <td><b>NO</b></td>
+          <td class="mono">—</td>
+          <td>Chose another provider for 70/30 split (offshore)</td>
+        </tr>
+<tr class="no">
+          <td>East Side Medical Dr. D Klein</td>
+          <td>2026-07-23</td>
+          <td>2026-07-05</td>
+          <td class="mono">18</td>
+          <td>Yes</td>
+          <td>2026-07-08</td>
+          <td><b>NO</b></td>
+          <td class="mono">—</td>
+          <td>Doctor decided to do it in-house</td>
+        </tr>
+<tr class="">
+          <td>Lorrie Imes</td>
+          <td>2026-06-21</td>
+          <td>2026-06-01</td>
+          <td class="mono">20</td>
+          <td>Yes</td>
+          <td>2026-07-07</td>
+          <td><b>—</b></td>
+          <td class="mono">—</td>
+          <td>She ghosted us (listed as onboarding/$40k/mo expected in Rob Aug 24 memo)</td>
+        </tr>
+<tr class="">
+          <td>James Smith</td>
+          <td>2026-07-02</td>
+          <td>2026-06-29</td>
+          <td class="mono">3</td>
+          <td>NO BID</td>
+          <td>—</td>
+          <td><b>—</b></td>
+          <td class="mono">—</td>
+          <td>Cardiovascular practice — not a good fit</td>
+        </tr>
+<tr class="yes">
+          <td>Dr. Susan Ashley</td>
+          <td>2026-05-07</td>
+          <td>2026-05-05</td>
+          <td class="mono">2</td>
+          <td>Yes</td>
+          <td>2026-05-13</td>
+          <td><b>YES</b></td>
+          <td class="mono">$311,000</td>
+          <td>Onboarding started this summer; first patients in late October</td>
+        </tr>
+<tr class="yes">
+          <td>Sameer Ohri, MD</td>
+          <td>2026-04-14</td>
+          <td>2026-04-12</td>
+          <td class="mono">2</td>
+          <td>Yes</td>
+          <td>2026-04-15</td>
+          <td><b>YES</b></td>
+          <td class="mono">$190,000</td>
+          <td>Onboarding delayed due to Medicare audits</td>
+        </tr></tbody>
+    </table>
+  </div>
+  <p class="small muted" style="margin-top:8px">On 24 Aug Rob also listed Lorrie Imes as expected (~500 patients, about $40k/month “revenues to us”). By 19 Oct he wrote “she ghosted us.” Imes is excluded from the $690k YES total. Rashid said no (70/30 offshore split). Klein said no (doing it in-house). Shirman and James Smith were no-bids (Russian-speaking coordinators; cardiovascular not a fit).</p>
+</section>
+
+<section id="quality">
+  <div class="hd"><h2>Lead quality and ICP</h2>
+    <p class="muted">Enrichment started around 7 Oct. It covers 55 of 753 contacts in the 20 Oct dump. Most of the file has no fit tag, so this is a recent sample, not a lifetime grade.</p>
+  </div>
+  <div class="grid g3">
+    <div class="kpi glass"><span>Strong fit</span><b>10</b><small>William, 21 Oct: estimated more than 250 Medicare patients</small></div>
+    <div class="kpi glass"><span>Moderate fit</span><b>3</b><small>Verifiable practice in the target niche</small></div>
+    <div class="kpi glass"><span>Weak / no-fit / possible fake</span><b>7 / 35 / 27</b><small>No-fit means research could not verify the practice — not proof the lead is junk. Some contacts have more than one of these tags.</small></div>
+  </div>
+  <div class="grid g2" style="margin-top:12px">
+    <div class="card glass">
+      <h3>Who actually shows up</h3>
+      <p>The strong-fit tags are independent physicians and small practices: internal medicine, family medicine, multi-specialty, gastroenterology. Several names on Rob’s show list are also tagged strong-fit (Slaughter, Blanc, Gupta, Shirman). Shirman being strong-fit and then a no-bid is the point: <b>fit ≠ closeable</b>.</p>
+      <p>Steve on 4 Nov, per the Week 80 pulse: “At least the shows that we have now are 95% providers who you would want.” That is a statement about <b>shows</b>, not about raw leads.</p>
+      <p>William on the 21 Oct call: of 7 then-current C-04 bookings, 4 were moderate or strong and 2 were no-fit or possible fakes.</p>
+    </div>
+    <div class="card glass">
+      <h3>GHL hygiene that will mislead you</h3>
+      <p>Sales pipeline as of the dump: 463 opportunities sitting in “Lost nurture – Reactivation,” only 5 in Closed Won, 25 in No Show, 6 in Booked Call. Closed Won contains Ohri ($200k), Ashley ($200k), Jones ($10k placeholder), plus two 2025 rows also at $10k (Ryan Anderson; Tamer Yacoub) that are <b>not</b> on Rob’s October YES list.</p>
+      <p>Every one of those Closed Won rows still has opportunity status <span class="mono">open</span>. Do not add the $10k defaults into pipeline value (432 rows use that default, plus 69 rows at $197 and one at $5,000).</p>
+    </div>
+  </div>
+</section>
+
+<section id="math">
+  <div class="hd"><h2>Real pipeline math</h2>
+    <p class="muted">Four layers, kept apart: cash already real, face-value if panels enroll, probability-weighted only where a close rate is sourced, and break-even on ad spend. Formulas are written out so anyone can redo them.</p>
+  </div>
+  <div class="grid g2">
+    <div class="card glass">
+      <h3>1. Realized revenue</h3>
+      <p>Rob, 24 Aug 2026 memo: the original contract was one paying 150-doctor practice that took about 10 months to onboard. The company was “doing about <b>$10k/month in revenue</b>,” hoping to build to $100k/month. That original practice is not eligible for Aletto’s 2.5% of Gross Collected bonus (bonus applies to Aletto-attributed deals after 23 Sep 2025; Notion as of 25 Aug still had no bonus receipts).</p>
+      <p>Aletto has collected <b>$39,999.92</b> in its own fees. The second $10,000 Ascension installment (INV-100484) was still unpaid on 6 Nov after Stripe declines on 4 Nov.</p>
+      <p class="small muted">We do not have a later company-revenue figure than the 24 Aug “about $10k/month.” Ashley’s first patients were due late October, after Rob’s 19 Oct email, so collected TrustStar revenue from the three YES deals was not documented as of that letter.</p>
+    </div>
+    <div class="card glass">
+      <h3>2. Face-value opportunities</h3>
+      <p>Unweighted YES total = $189,000 + $311,000 + $190,000 = <b>$690,000 per year</b> of expected TrustStar revenue if those panels fully enroll. Average deal $230,000.</p>
+      <div class="formula">Face value = sum of Rob’s YES proposal annuals, not GHL monetary values</div>
+      <p>The four in-progress proposals (Slaughter, Blanc, Pimentel, Gaber) have <b>no dollar amounts</b> in his sheet. Assigning them $230k each would invent $920k. We do not do that. On 4 Nov Steve talked about ~10 active opportunities and a goal of 2 closes by Thanksgiving and 2 more in early December — a sales target, not a sourced probability.</p>
+    </div>
+    <div class="card glass">
+      <h3>3. What Rob said a patient is worth</h3>
+      <p><b>To the physician practice</b> (7 Jul “Changing Direction,” Appendix A): “A provider with 200 patients in our program can typically generate about $250k in annual revenue, and about $100k in net profit.” No up-front cost to the practice; TrustStar is paid from CPT reimbursements. That $250k is <b>the practice’s</b> revenue, not TrustStar’s.</p>
+      <p><b>To TrustStar</b> (24 Aug memo, “revenues to us”): Ashley ~300 patients / about $25,000 a month; Ohri ~200 patients / about $15,000; Imes was ~500 / about $40,000 before she ghosted.</p>
+      <div class="formula">$25,000 / 300 = $83.33&nbsp;&nbsp;·&nbsp;&nbsp;$15,000 / 200 = $75&nbsp;&nbsp;·&nbsp;&nbsp;$40,000 / 500 = $80&nbsp;&nbsp;→ about $75–$83 per enrolled patient per month to TrustStar</div>
+      <p class="small muted">Cross-check: 12 × $25k = $300k vs Ashley’s $311k proposal; 12 × $15k = $180k vs Ohri’s $190k. Close enough that the proposals look like annualized versions of those monthlies. We use $80/patient-month as the midpoint when we do break-even math, and we label it.</p>
+    </div>
+    <div class="card glass">
+      <h3>4. Probability-weighted — sourced rates only</h3>
+      <p>From the 13 named shows: 10 got a proposal, 2 were no-bids, 1 is still being chased. Of the 10 proposals, 3 are YES, 2 are NO, 1 ghosted (Imes), 4 are still working.</p>
+      <div class="formula">Show → YES so far = 3 / 13 = 23.1%<br>Among proposals that already have a verdict (YES + NO + ghosted) = 3 / 6 = 50%<br>If the 4 still-working proposals closed at that 50% verdict rate: +2 YES. That is a scenario, not a forecast.<br>We do not multiply those 4 by $230k, because Rob never wrote values for them.</div>
+      <p>Steve’s 4 Nov “2 closes by Thanksgiving” would, if they looked like the average YES, be about $460k more face-value annual revenue — again a goal, not a rate we can defend from the file.</p>
+    </div>
+  </div>
+
+  <div class="card glass" style="margin-top:12px">
+    <h3>Ad-spend break-even</h3>
+    <div class="formula">
+      CAC (ads only, Rob’s window) = $22,484 / 3 YES = $7,494.67<br>
+      Patient-months to earn back that CAC = $7,494.67 / $80 = 93.7 patient-months<br>
+      A 200-patient panel, once fully enrolled, would earn that back in 0.47 months (93.7 / 200).<br>
+      Payback clock starts after enrollment. Ashley signed in May and was still waiting on first patients in late October — about five months of lag.<br><br>
+      Current ads ≈ $1,524.68/week × 52 / 12 = $6,606.94/month<br>
+      Enrolled patients needed that month to cover ads (ignoring Aletto fees, sales cost and delivery cost) = $6,606.94 / $80 = 82.6 patients<br>
+      One average YES at full enrollment = $230,000 / 12 = $19,167/month, which covers current monthly ad spend about 2.9× — after the panel is actually live.
+    </div>
+    <p class="small muted" style="margin:0">This ignores Aletto’s fee and TrustStar’s own delivery costs, so it is a best-case ad-only break-even. It is still enough to show why one ramped deal pays for a lot of media — and why a five-month onboarding lag plus a $6,600 monthly media bill feels like a cash crunch even with $690k on paper.</p>
+  </div>
+</section>
+
+<section id="spend">
+  <div class="hd"><h2>$1,500 a week versus $700–$800</h2>
+    <p class="muted">Rob on 4 Nov, from the Week 80 pulse: “I’m running into a little bit of a cash crunch, and I was just trying to decide if I could save a few grand a month by toning down our spend for the next two or three months.” William pushed back the same day, citing 4 booked calls last week and 15 in three weeks. Rob had not written a reply on spend as of the CS note. There is no later standalone William-to-Rob email on this — the conversation was live on the call (<a href="https://fathom.video/calls/889138677">Fathom, 4 Nov, 17:00 Europe/Madrid</a>).</p>
+  </div>
+  <div class="grid g3">
+    <div class="kpi glass"><span>Current (last 4 complete weeks)</span><b>$1,525/wk</b><small>$6,607/month</small></div>
+    <div class="kpi glass"><span>His ask</span><b>$700–$800/wk</b><small>$3,033–$3,467/month</small></div>
+    <div class="kpi glass"><span>Monthly saving at $750</span><b>$3,357</b><small>Matches his “few grand a month.” Assumption: spend actually stays at the new cap.</small></div>
+  </div>
+  <div class="card glass" style="margin-top:12px">
+    <h3>If volume scaled 1:1 with spend — an assumption, not a guarantee</h3>
+    <p>Using Rob’s October efficiency (the high-spend, Admiral’s Letter window): $1,500/week produced about 12 leads, 6 bookings and 1.5 shows per week.</p>
+    <div class="formula">
+      At $750/week, if every cost stayed constant: about 6 leads, 3 bookings, 0.75 shows per week.<br>
+      Constant CPA is not guaranteed. New creatives fatigue (this week, through 3 Nov, the cache shows only 1 Meta lead and Steve said 1 MQL). Cutting the extra ~$1,000/week campaign is not the same as evenly turning down everything — Fathom said they had been at ~$700/week and then added a ~$1,000/week campaign. That add-on is Admiral’s Letter, the efficient one.<br>
+      Maturation lag: today’s cut shows up as fewer proposals in 4–8 weeks and fewer first patients months after that. Today’s bookings are still working through a ~40-call backlog.
+    </div>
+    <p><b>Balanced read:</b> the file supports “Admiral’s Letter at $1,500 is buying cheaper bookings than the spring $850 weeks.” It does not support “therefore you should not cut, full stop.” A two-to-three-month trim is economically understandable given ~$10k/month company revenue (last stated in August), a $6,600 media bill, unpaid Aletto installment, and a backlog that sales has not cleared. If a cut happens, the least damaging version is: pause tests, keep C-04, and put the saving next to a show-rate plan (the confirmation work Rob asked for on 20 Oct). Defending $1,500 without that plan asks him to spend cash he said he is short of, in order to feed a queue that is already long.</p>
+  </div>
+</section>
+
+<section id="talk">
+  <div class="hd"><h2>Client-ready talking points</h2>
+    <p class="muted">For a later email. Nothing below has been sent. Tone is factual, not a hard sell.</p>
+  </div>
+  <div class="card glass">
+    <ol class="talk">
+      <li>Since mid-September you have been at about $1,500 a week. In the two October weeks you scored yourself, that produced 24 leads, 12 bookings and 3 shows for $3,000 — $250 per booking and a 50% book rate, versus roughly 17% and $485–$730 per booking in the spring.</li>
+      <li>Admiral’s Letter is doing the heavy lifting: 16 bookings from 12 of those leads, about $244 per booked call. The extra ~$1,000 a week you added on top of the old ~$700 is that campaign.</li>
+      <li>The three practices you marked YES — Ashley, Jones and Ohri — are $690,000 a year of expected TrustStar revenue if they fully enroll. At the run-rate you described in August (~$80 per enrolled patient per month), one ramped panel in that range more than covers a $1,500 weekly media bill. The catch, which you already flagged, is timing: Ashley took from May until late October to see first patients; Ohri is on a Medicare-audit delay.</li>
+      <li>Shows are still the leak. Thirteen of 57 bookings showed in your April–October file (about 23%). Steve is looking at a backlog of about 40 calls. Buying more bookings without lifting that show rate mostly lengthens the queue.</li>
+      <li>A move to $700–$800 a week would save about $3,000–$3,500 a month — the “few grand” you mentioned on 4 Nov. If cash requires that for two or three months, the cleaner cut is the tests, not Admiral’s Letter, and it should travel with the confirmation / show-rate work you asked for on 20 Oct.</li>
+      <li>We should not promise that holding $1,500 will produce two Thanksgiving closes. Those closes depend on the opportunities already in Steve’s pipeline, not on this week’s new leads.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="gaps">
+  <div class="hd"><h2>Discrepancies, missing pieces, freshness</h2></div>
+  <div class="tbl-wrap glass">
+    <table>
+      <thead><tr><th>Item</th><th>What disagrees, or what we do not have</th></tr></thead>
+      <tbody>
+        <tr><td>Lead counts in Rob’s window</td><td>Rob 229 leads · GHL opt-ins created 1 Apr–14 Oct = 211 · Meta lead events 1 Apr–14 Oct = 154. Spend almost matches ($22,484 vs $22,532.53). Leads are different definitions (his column vs unique opt-in contacts vs Meta form events).</td></tr>
+        <tr><td>Shows 12 vs 13</td><td>Data tab monthly showed cells sum to 12; Shows tab and his email use 13. Gupta is the extra named show.</td></tr>
+        <tr><td>Show rate 23% vs ~59%</td><td>An older first-four-months file (campaign starting 23 May 2025) had 49 booked and 22 no-shows, which implies about a 55% show rate if those no-shows are a subset of the 49. Jake used a “59% not 29%” line on 11 Oct in another client thread. Rob’s own April–October 2026 file is 13/57 = 22.8%. Recent internal notes also mentioned a 71% no-show week (5 of 7). Current working figure: Rob’s 23%.</td></tr>
+        <tr><td>GHL vs Rob on deal value</td><td>Ohri $200k vs $190k; Ashley $200k vs $311k; Jones $10k vs $189k. The $10k is a CRM default, not a price.</td></tr>
+        <tr><td>Closed Won extras</td><td>Ryan Anderson (31 Aug 2025) and Tamer Yacoub (19 Jul 2025) sit in Closed Won at $10k and are not on the October YES list. Unverified as real 2026 Aletto-attributed sales.</td></tr>
+        <tr><td>Imes</td><td>$40k/month expected on 24 Aug; “ghosted” on 19 Oct. Left out of $690k.</td></tr>
+        <tr><td>Live GHL</td><td>The GHL connector available to this run is bound to the Aletto agency location, not sub-account k9NJgO3rym5reObnO7DO. Contacts used here are the dated dump in <span class="mono">/workspace/robray/contacts.json</span> (753 contacts, created 27 May 2025 – 20 Oct 2026).</td></tr>
+        <tr><td>Live Meta / Windsor</td><td>Alternate Windsor license expired; primary connection paused for more than 5 sources. Cache restored from <span class="mono">clockspring-proposal/meta_daily_full.json</span> into <span class="mono">client_report/data/_meta_daily.json</span>, fetched stamp 3 Nov 2026, last day 3 Nov 2026. No spend was invented for 4–6 Nov.</td></tr>
+        <tr><td>Enrichment workbook</td><td>No Drive/Sheets enrichment export was found. Quality uses GHL fit tags plus the 21 Oct and 4 Nov Fathom notes.</td></tr>
+        <tr><td>Outcomes after 20 Oct</td><td>Dashboard 21–27 Oct (11 leads, 8 MQLs, 4 bookings) and the 4 Nov call (1 MQL this week, ~10 active opps, 40-call backlog) are the only post-dump outcome sources. Meeting dates vs booking-created dates cannot be fully rebuilt from tags alone.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="sources">
+  <div class="hd"><h2>Sources and downloads</h2>
+    <p class="muted">Anyone on the team should be able to rebuild the tables from these files.</p>
+  </div>
+  <div class="grid g2">
+    <div class="card glass">
+      <h3>Primary sources</h3>
+      <ul class="plain">
+        <li>Rob Wray email + workbook, 19 Oct 2026, 22:04 Europe/Madrid — Gmail <span class="mono">1a155c46c9d5ddce</span>, file <span class="mono">Aletto Analysis April-Oct 2026.xlsx</span></li>
+        <li>Rob “Changing Direction” letter, 7–8 Jul 2026, Appendix A economics — Gmail <span class="mono">1a0f3fa58d9a0fe16</span></li>
+        <li>Rob memo, 24 Aug 2026 (25 Aug 00:06 Europe/Madrid) — company revenue, Ashley/Ohri/Imes patient economics — Gmail <span class="mono">1a035cfc1057f23c</span></li>
+        <li>Biweekly call, 4 Nov 2026, 17:00 Europe/Madrid — spend cut, C-04, backlog — <a href="https://fathom.video/calls/889138677">fathom.video/calls/889138677</a></li>
+        <li>CS escalation note (William’s same-day pushback; no written reply from Rob on spend) — Gmail <span class="mono">1a1aac2ddea13a11</span></li>
+        <li>Notion client record — <a href="https://app.notion.com/p/20ae6601de7980f0b95ee086f671834f">BlueStar / TrustStar</a>; Week 80 pulse <a href="https://app.notion.com/p/40fe6601de7981c4a132c5a6f6bf0be5">here</a></li>
+        <li>Meta daily cache through 3 Nov 2026 — <span class="mono">client_report/data/_meta_daily.json</span> (new account) and <span class="mono">ascension/raw/meta_daily.json</span> (SeniorTech)</li>
+        <li>GHL dump through 20 Oct 2026 — <span class="mono">/workspace/robray/contacts.json</span>, <span class="mono">opps.json</span>, <span class="mono">pipes.json</span></li>
+        <li>Dashboard 21–27 Oct snapshot — <span class="mono">client_report/data/dashboard/bluestar-telehealth.json</span>, last updated 28 Oct 17:30 ET / 23:30 Europe/Madrid</li>
+        <li>Prior weekly client report (paths and the $1,244.41 / 5-lead 29 Oct–4 Nov window) — <a href="https://jaketub16.github.io/client-report-6c08bb23/">client-report-6c08bb23</a></li>
+      </ul>
+    </div>
+    <div class="card glass">
+      <h3>Reproducible CSVs on this page</h3>
+      <ul class="plain">
+        <li><a href="exports/weekly_meta_ghl_cohort.csv">weekly_meta_ghl_cohort.csv</a> — every Monday–Sunday week</li>
+        <li><a href="exports/weekly_rob_spreadsheet.csv">weekly_rob_spreadsheet.csv</a> — his undated weekly rows</li>
+        <li><a href="exports/monthly_meta.csv">monthly_meta.csv</a></li>
+        <li><a href="exports/shows_rob_spreadsheet.csv">shows_rob_spreadsheet.csv</a></li>
+        <li><a href="exports/quality_distribution.csv">quality_distribution.csv</a></li>
+        <li><a href="exports/closed_won.csv">closed_won.csv</a> — GHL Closed Won vs his YES values</li>
+      </ul>
+      <p class="small muted">Build inputs also live on the box at <span class="mono">/workspace/truststar-audit/</span>. Seed file <span class="mono">client_report/data/bluestar.json</span> contains example ad metrics and was not used.</p>
+    </div>
+  </div>
+</section>
+
+<div class="foot glass">
+  Aletto · TrustStar Health / BlueStar TeleHealth internal audit · built 6 Nov 2026, Europe/Madrid · noindex · not sent to the client · figures recomputed from the CSVs and source files listed above.
+</div>
+</main>
+</body>
+</html>
